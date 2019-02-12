@@ -19,12 +19,12 @@
     "chai",
     "mocha"
   ],
-  "author": "Glaucia Lemos",
+  "author": "Gustavo Alexandre",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/glaucia86/live-coding-tdd-node/issues"
+    "url": "https://github.com/gusttavo212/GlauciaLemosLive/issues"
   },
-  "homepage": "https://github.com/glaucia86/live-coding-tdd-node#readme",
+  "homepage": "https://github.com/gusttavo212/GlauciaLemosLive#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "config": "^3.0.1",
