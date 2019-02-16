@@ -9,21 +9,18 @@ const express = require('express');
 
 const app = express();
 const mongoose = require('mongoose');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const bodyParse = require('body-parser');
 
 const port = process.env.PORT || 8000;
-const configDb = require('./src/config/database');
+
+// const configDb = require('./src/config/database');
 // const routes = require('./src/routes/routes');
 
 mongoose.Promise = global.Promise;
 
 const db = mongoose.connection;
 db.on('Error', console.error.bind(console, 'Erro ao realizar a conexão com a base de dados...:'));
-
-if (configDb.util.getEnv('NODE_ENV') !== 'Test') {
-  app.use(morgan('combined'))
-}
 
 app.use(bodyParse.json());
 app.use(bodyParse.urlencoded({ extended: true }));
