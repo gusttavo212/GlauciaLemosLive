@@ -8,7 +8,7 @@ module.exports = {
     "no unused-vars": "off",
     "max-len": 0,
     "prefer-destructuring": "off",
-    "newline-after-import": "off",
+    "import/newline-after-import": "off",
   }
 
 };
