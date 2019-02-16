@@ -1,5 +1,5 @@
 /**
- * Arquivo: database.js
+ * Arquivo: src/config/database.js
  * Author: Gustavo Alexandre
  * Description: Arquivo responsavel pela connection string da conexão da api (server.js).
  * Data: 16/02/2019

@@ -18,7 +18,7 @@ const configDb = require('./src/config/database');
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect(configDb.url, { useNewUrlParser: true })
+mongoose.connect(configDb.url, { useNewUrlParser: true });
 const db = mongoose.connection;
 db.on('Error', console.error.bind(console, 'Erro ao realizar a conexão com a base de dados...:'));
 if (db.readyState === 2) { console.log('MongoDB Connectado'); }
