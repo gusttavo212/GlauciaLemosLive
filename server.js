@@ -13,14 +13,15 @@ const mongoose = require('mongoose');
 const bodyParse = require('body-parser');
 
 const port = process.env.PORT || 8000;
-
-// const configDb = require('./src/config/database');
 // const routes = require('./src/routes/routes');
+const configDb = require('./src/config/database');
 
 mongoose.Promise = global.Promise;
 
+mongoose.connect(configDb.url, { useNewUrlParser: true })
 const db = mongoose.connection;
 db.on('Error', console.error.bind(console, 'Erro ao realizar a conexão com a base de dados...:'));
+if (db.readyState === 2) { console.log('MongoDB Connectado'); }
 
 app.use(bodyParse.json());
 app.use(bodyParse.urlencoded({ extended: true }));
