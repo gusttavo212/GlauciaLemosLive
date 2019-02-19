@@ -12,14 +12,22 @@ function createPost(req, res) {
 
   newPost.save((error, post) => {
     if (error) {
-      res.status(400).json({
-        error: 'Error!',
-      }, error);
+      res.status(400).json({ error: 'Error!' }, error);
     } else {
-      res.status(200).json({
-        message: 'Post Adicionado com Sucesso!',
-      }, post);
+      res.status(200).json({ message: 'Post Adicionado com Sucesso!' }, post);
     }
+  });
+}
+
+function findAll(req, res) {
+  const query = Post.find({});
+
+  query.exec((error, posts) => {
+    if (error) {
+      res.status(400).json(error);
+    }
+
+    res.status(200).json(posts);
   });
 }
 
