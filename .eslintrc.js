@@ -9,6 +9,8 @@ module.exports = {
     "max-len": 0,
     "prefer-destructuring": "off",
     "import/newline-after-import": "off",
+    "no-undef": "off",
+    "object-shorthand": "off"
   }
 
 };
