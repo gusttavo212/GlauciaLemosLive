@@ -9,7 +9,6 @@ const express = require('express');
 
 const app = express();
 const mongoose = require('mongoose');
-// const morgan = require('morgan');
 const bodyParse = require('body-parser');
 
 const port = process.env.PORT || 8000;

@@ -6,12 +6,20 @@
 */
 
 const express = require('express');
-const router = express.Router;
+const router = express.Router();
 const posts = require('../controllers/post');
 
-// Definir as rotas da nossa api: 'Post'
+// GET: http://localhost:8000/v1/posts/
 router.get('/posts/', posts.findAll);
+
+// GET: http://localhost:8000/v1/posts/:id
 router.get('/posts/:id', posts.findOne);
-router.post('/posts/:id', posts.createPost);
+
+// POST: http://localhost:8000/v1/posts
+router.post('/posts', posts.createPost);
+
+// PUT: http://localhost:8000/v1/posts/:id
 router.put('/posts/:id', posts.updateOne);
+
+// DELETE: http://localhost:8000/v1/posts/:id
 router.delete('/posts/:id', posts.deleteOne);
