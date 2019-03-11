@@ -1,16 +1,38 @@
 module.exports = {
-  "extends": "airbnb-base",
-  "plugins": [
-    "import"
-  ],
-  "rules": {
+  extends: "airbnb-base",
+  globals: {
+    $: true,
+    window: true,
+    document: true
+  },
+  plugins: ["import"],
+  rules: {
     "no-console": "off",
-    "no unused-vars": "off",
-    "max-len": 0,
-    "prefer-destructuring": "off",
     "import/newline-after-import": "off",
+    "global-require": "off",
     "no-undef": "off",
-    "object-shorthand": "off"
+    "import/no-unresolved": "off",
+    "no-param-reassign": "off",
+    "no-shadow": "off",
+    "import/extensions": "off",
+    "no-multi-assign": "off",
+    "import/no-dynamic-require": "off",
+    "prefer-destructuring": "off",
+    "no-alert": "off",
+    "func-names": "off",
+    "eol-last": "off",
+    "no-useless-return": "off",
+    "consistent-return": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        devDependencies: true
+      }
+    ],
+    "eslint-disable-next-line": 0,
+    "no-restricted-syntax": 0,
+    "no-prototype-builtins": 0,
+    "no-unused-vars": 0,
+    "max-len": 0
   }
-
 };
